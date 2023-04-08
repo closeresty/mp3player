@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>mp3 player</title>
+</head>
+<body>
+    <div class="phone">
+        <div class="inner">
+          <div class="header">
+            <button class="button back">
+              <svg t="1577165392507" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5866" width="16" height="16"><path d="M20.48 542.72l240.64 250.88c20.48 15.36 46.08 15.36 66.56 0s20.48-46.08 0-66.56L153.6 552.96h829.44c20.48 0 40.96-20.48 40.96-40.96s-20.48-56.32-40.96-56.32H153.6l174.08-174.08c20.48-15.36 20.48-46.08 0-66.56H261.12L15.36 465.92c-5.12 5.12-10.24 15.36-10.24 20.48 0 5.12-5.12 10.24-5.12 15.36 0 5.12 0 10.24 5.12 15.36 5.12 10.24 5.12 20.48 15.36 25.6z" p-id="5867"></path></svg>
+            </button>
+            <h2 class="title">Album Devres </h2>
+            <button class="button more">
+              <svg t="1577165711099" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8060" width="16" height="16"><path d="M231.08266667 509.49688889c-0.11377778 51.76888889-41.87022222 93.52533333-93.75288889 93.41155556-51.65511111-0.11377778-93.63911111-42.09777778-93.52533333-93.86666667 0-51.54133333 42.21155555-93.52533333 93.98044444-93.41155556 51.65511111 0.11377778 93.29777778 41.984 93.29777778 93.86666667z m656.49777778-93.75288889c51.76888889 0 93.86666667 41.87022222 93.86666666 93.52533333 0.11377778 51.65511111-41.87022222 93.75288889-93.63911111 93.75288889-51.88266667 0-93.75288889-41.64266667-93.75288889-93.52533333s41.64266667-93.75288889 93.52533334-93.75288889zM512.45511111 603.02222222c-51.65511111 0-93.98044445-42.43911111-93.75288889-93.75288889 0.34133333-51.76888889 42.21155555-93.52533333 93.98044445-93.52533333 51.65511111 0 93.86666667 42.21155555 93.63911111 93.75288889-0.11377778 51.65511111-42.09777778 93.52533333-93.86666667 93.52533333z" p-id="8061"></path></svg>
+            </button>
+          </div>
+          
+          <div class="cover">
+            <img src="././assets/images/matisyahu.jpg" alt="Matisyahu">
+          </div>
+          
+          <div class="info">
+            <h3 class="song">One Day</h3>
+            <h4 class="artist">Matisyahu</h4>
+          </div>
+          
+          <div class="time">
+            <div class="bar"></div>
+          </div>
+          
+          <div class="control">
+            <button class="control-button prev">
+              <svg t="1577170367189" class="icon" viewBox="0 0 1194 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1743" width="40" height="40">
+                <path d="M420.943721 392.442767c-106.153251 66.047119-106.153251 173.139025 0 239.100812l581.45358 361.467181c106.153251 66.047119 192.253437 23.039693 192.253437-95.913388V126.888975C1194.650738 7.850562 1108.46522-34.9862 1002.397301 30.975587L420.943721 392.442767z" p-id="1744" fill="#d5e1ea" filter="url(#inset-shadow)"></path>
+                <path d="M0 0m127.998293 0l0 0q127.998293 0 127.998294 127.998293l0 767.98976q0 127.998293-127.998294 127.998294l0 0q-127.998293 0-127.998293-127.998294l0-767.98976q0-127.998293 127.998293-127.998293Z" p-id="1745" fill="#d5e1ea" filter="url(#inset-shadow)"></path>
+              </svg>
+            </button>
+            
+            <button onclick="playAudio()">
+                <audio id="myAudio">
+                    <source src="././music/One Day.mp3" type="audio/mpeg">
+                  </audio>
+                
+                  <!-- <button onclick="playAudio()"></button> -->
+                
+              <svg viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+                <filter id="inset-shadow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feComponentTransfer in=SourceAlpha>
+                    <feFuncA type="table" tableValues="1 0" />
+                  </feComponentTransfer>
+                  <feGaussianBlur stdDeviation="50"/>
+                  <feOffset dx="-5" dy="-5" result="offsetblur"/>
+                  <feFlood flood-color="rgba(0, 0, 0, 0.2)" result="color"/>
+                  <feComposite in2="offsetblur" operator="in"/>
+                  <feComposite in2="SourceAlpha" operator="in" />
+                  <feMerge>
+                    <feMergeNode in="SourceGraphic" />
+                    <feMergeNode />
+                  </feMerge>
+                </filter>
+                <path d="M888.32 400.128L236.544 23.808A129.194667 129.194667 0 0 0 42.666667 135.765333v752.64a129.194667 129.194667 0 0 0 193.877333 111.786667L888.32 624.042667a129.28 129.28 0 0 0 0-223.829334z" p-id="7474" fill="#ffffff" filter="url(#inset-shadow)"></path>
+              </svg>
+            </class=>
+            
+            <button class="control-button next">
+              <svg t="1577170367189" class="icon" viewBox="0 0 1194 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1743" width="40" height="40" transform="rotate(180)">
+                <path d="M420.943721 392.442767c-106.153251 66.047119-106.153251 173.139025 0 239.100812l581.45358 361.467181c106.153251 66.047119 192.253437 23.039693 192.253437-95.913388V126.888975C1194.650738 7.850562 1108.46522-34.9862 1002.397301 30.975587L420.943721 392.442767z" p-id="1744" fill="#d5e1ea" filter="url(#inset-shadow)"></path>
+                <path d="M0 0m127.998293 0l0 0q127.998293 0 127.998294 127.998293l0 767.98976q0 127.998293-127.998294 127.998294l0 0q-127.998293 0-127.998293-127.998294l0-767.98976q0-127.998293 127.998293-127.998293Z" p-id="1745" fill="#d5e1ea" filter="url(#inset-shadow)"></path>
+              </svg>
+            </button>
+          </div>
+          
+        </div>
+      </div>
+      
+    
+      
+</body>
+</html>
